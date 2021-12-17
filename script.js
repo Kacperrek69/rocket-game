@@ -1,4 +1,4 @@
-window.history.replaceState(null, null, "?Autor=Kacper_Drobik");
+
 
 var zycia = 3;
 var punkty = 0; 
