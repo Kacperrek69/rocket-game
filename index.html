@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gra z rakietą">
+    <meta name="keywords" content="rakieta, galaktyka, asteroidy">
+    <meta name="author" content="Kacper Drobik">
+
+    <title>Rakieta</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="img/icon.ico?">
+
+    <style>
+        body{
+            margin: auto;
+            background-image: url("img/tlo2.png");
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+
+        #okno{
+            border-radius: 20px;
+            -webkit-box-shadow: 23px 27px 20px 3px rgba(181, 0, 3, 0.53);
+            -moz-box-shadow: 23px 27px 20px 3px rgba(181, 0, 3, 0.53);
+            box-shadow: 23px 27px 20px 3px rgba(181, 0, 3, 0.53);
+            background-color: rgb(255, 80, 80);
+            padding-bottom: 3%;
+            position: absolute;
+            width: 40%;
+            max-height: 63%;
+            top: 25%;
+            right: 30%;
+            left: 30%; 
+            z-index: 3;
+        }
+
+        #autor {
+            position: absolute;
+            width: 10%;
+            height: 5%;
+            top: 92%;
+            right: 90%;
+            text-align: center;
+            font-size: 1.4vw;
+            color: white;
+            font-weight: bold;
+        }
+
+        #img{
+            height: 30%;
+            z-index: 1;
+        }
+
+        #nav {
+            z-index: 3;
+            position: absolute;
+            width: 10%;
+            top: 2%;
+            left: 90%; 
+        }
+
+    </style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" ondrag="return false">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <img id="ikon" style="position: absolute; top:1%; left:42%; width: 16%; z-index: 4" width="100%" src="img/ikona.png">
+
+    <div id="okno">
+        <center><p style="font-size: 2.5vw; font-weight: bold;">Wybierz rakietę: </p></center> 
+        
+        <form method="get"> 
+            <div>
+                <label class="container" id="userInput" >
+                    <input type="radio" name="skin" value="1" >
+                    <span class="checkmark"></span>
+                    <img src="img/rakieta-img.png" width="50%"/>
+                </label>
+
+                <label class="container" id="userInput" >
+                    <input type="radio" name="skin" value="2" >
+                    <span class="checkmark"></span>
+                    <img src="img/rakieta2-img.png" width="50%"/>
+                </label>
+
+                <label class="container" id="userInput"  style="margin-left: 2%;">
+                    <input type="radio" name="skin" value="3">
+                    <span class="checkmark"></span>
+                    <img src="img/rakieta3-img.png" width="50%"/>
+                </label>
+            </div>
+            <div>
+                <br>
+                <center><button class="button" type="button" type="submit" onclick="clickk()">Graj!</button></center>
+            </div>
+          </form>
+    </div>
+
+    
+    <p id="autor">Kacper Drobik</p>
+
+
+    <div id="nav">
+        <div style="margin-bottom: 2px;" id="serca">   
+        </div>
+
+        <div style="margin-bottom: 5px; color:rgb(255, 251, 0); font-size: x-large; font-weight: bold; text-align: center;" id="punkty">
+        </div>
+
+        <div style="color:white; font-size: x-large; font-weight: bold; text-align: center;" id="stopwatch">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
